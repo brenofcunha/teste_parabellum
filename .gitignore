@@ -1,0 +1,9 @@
+# Python cache/bytecode
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+.venv/
+
+# Local IDE/workspace cache
+.idea/workspace.xml
