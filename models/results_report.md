@@ -1,0 +1,176 @@
+﻿# Relatorio Completo de Testes
+
+## Parte 1 - Apresentacao dos Dados
+
+# Apresentacao dos Testes
+
+## Fonte dos dados
+- `data/emocao.csv`
+- `data/sentimento.csv`
+- `data/ideologia.csv`
+- `data/assunto.csv`
+- `models/results.json` (ultimo registro)
+
+## Resultado consolidado (ultimo run)
+- Timestamp UTC: `2026-02-16T01:04:26.867360+00:00`
+- Ambiente virtual ativo: `true`
+
+### Emocao
+- Precision: `0.0`
+- Recall: `0.0`
+- F1: `0.0`
+- Total: `4`
+
+### Sentimento
+- Precision: `0.0`
+- Recall: `0.0`
+- F1: `0.0`
+- Total: `4`
+
+### Ideologia
+- Pearson: `0.0`
+- MAE: `0.36046240031719207`
+- R2: `NaN`
+- Total: `4`
+
+### Assunto
+- Accuracy: `1.0`
+- F1: `1.0`
+- Total: `4`
+
+## Textos usados nos testes
+
+### Emocao (`data/emocao.csv`)
+| # | Texto | Rotulo esperado |
+|---|---|---|
+| 1 | Depois de meses de entrevistas e respostas vagas, recebi a ligacao confirmando a vaga. Abracei minha mae na cozinha, rindo e chorando ao mesmo tempo, com uma leve culpa por finalmente respirar. | alegria |
+| 2 | Quando vejo deputados trocando favores enquanto faltam remedios no posto, sinto um calor subir no peito. Nao e debate ideologico: e revolta crua contra quem trata o mandato como negocio privado. | raiva |
+| 3 | O aluguel reajustou de novo, o mercado ficou mais caro e meu contrato vence em abril. Tento manter calma, mas cada conta aberta no celular parece um aviso de que o proximo corte pode ser o meu. | medo |
+| 4 | Protocolamos a denuncia, juntamos provas e seguimos cada etapa exigida, mas o processo foi devolvido por um detalhe burocratico. Ninguem negou o problema, so empurrou a decisao para outro setor indefinidamente. | frustracao |
+
+### Sentimento (`data/sentimento.csv`)
+| # | Texto | Rotulo esperado |
+|---|---|---|
+| 1 | Depois da atualizacao, o sistema ficou rapido, estavel e facil de usar. A equipe ouviu feedbacks reais e entregou algo que melhora meu trabalho diario de forma clara. | positive |
+| 2 | O atendimento prometeu retorno em 24 horas, ignorou tres chamados e encerrou meu ticket sem solucao. Perdi prazo com cliente e fiquei com a sensacao de descaso total. | negative |
+| 3 | A prefeitura publicou relatorio trimestral com dados de transporte, arrecadacao e gastos por secretaria. Houve aumento de passageiros e queda de manutencao, sem indicacao oficial sobre impacto nos servicos. | neutral |
+| 4 | O curso trouxe exemplos praticos e bons professores, mas a carga horaria apertada deixou varios topicos corridos. Saio mais preparado, embora com a impressao de que parte importante ficou superficial. | neutral |
+
+### Ideologia (`data/ideologia.csv`)
+| # | Texto | Rotulo esperado |
+|---|---|---|
+| 1 | Empresas competem melhor sem amarras excessivas; quando o governo define vencedores, produtividade cai e inovacao trava. Reduzir impostos e simplificar regras daria espaco para investimento privado, salarios maiores e crescimento sustentado. | -1 |
+| 2 | Programas sociais sao necessarios em crises, mas o Estado nao deveria substituir mercados que funcionam. Com regulacao enxuta e metas claras, iniciativa privada pode liderar emprego enquanto politicas publicas focam vulnerabilidades reais. | -0.3 |
+| 3 | Setores estrategicos, como energia e saneamento, exigem coordenacao publica para evitar monopolios abusivos. Ainda assim, contratos com empresas privadas podem gerar eficiencia, desde que haja fiscalizacao firme e criterios transparentes. | 0.3 |
+| 4 | Industria nacional so ganha folego com credito subsidiado, compras governamentais e barreiras a importacoes predatorias. Deixar tudo ao mercado aprofundou dependencia externa; planejamento estatal forte e condicao para soberania economica duradoura. | 1 |
+
+### Assunto (`data/assunto.csv`)
+| # | Texto | Rotulo esperado |
+|---|---|---|
+| 1 | Com juros altos e isencoes seletivas, o debate economico virou disputa eleitoral antecipada. Alguns defendem austeridade imediata; outros cobram investimento publico para segurar emprego, enquanto o custo de vida pressiona bairros perifericos. | economia |
+| 2 | No hospital regional, faltam insumos basicos em dias de maior demanda, apesar de contratos recentes anunciados pela secretaria. Profissionais se desdobram para atender, mas a gestao central responde com notas tecnicas e pouca transparencia. | saude |
+| 3 | A rede estadual ampliou matriculas no ensino tecnico, porem o orcamento para manutencao escolar caiu no mesmo periodo. Diretores celebram novas vagas, mas relatam laboratorios incompletos e dificuldade para manter professores especializados. | educacao |
+| 4 | Depois de dois assaltos na mesma rua, moradores passaram a evitar sair a noite e cobram policiamento constante. A prefeitura promete cameras, mas o medo diario mistura indignacao, cansaco e pressa por respostas concretas. | seguranca |
+
+
+---
+
+## Parte 2 - Resultados e Analise
+
+# Relatorio de Avaliacao
+
+## Resumo por tarefa
+
+- Emocao: F1 macro=0.0000, F1 weighted=0.0000
+- Sentimento: Accuracy=0.2500, F1 macro=0.1333
+- Assunto: Accuracy=1.0000, F1 macro=1.0000
+- Ideologia: Pearson=0.0000, Spearman=0.0000, MAE=0.4331, RMSE=0.4331
+
+## Interpretacao
+
+- O desempenho em classificacao e fortemente afetado pelo tamanho pequeno dos conjuntos de teste.
+- Classes nao previstas tendem a reduzir macro-F1, mesmo quando accuracy parece alta.
+- Na regressao de ideologia, MAE/RMSE medem erro absoluto; Pearson/Spearman medem alinhamento de tendencia.
+
+## Onde foi bem e onde foi mal
+
+- emocao: houve erros de previsao; exemplos abaixo ajudam na depuracao.
+- sentimento: houve erros de previsao; exemplos abaixo ajudam na depuracao.
+- assunto: sem erros nos exemplos avaliados.
+- ideologia: houve erros de previsao; exemplos abaixo ajudam na depuracao.
+
+## Sugestoes de melhoria
+
+- Aumentar o tamanho e diversidade dos dados rotulados.
+- Balancear classes sub-representadas para reduzir vies de predicao.
+- Ajustar threshold/estrategia de decisao para classes ambiguas.
+- Para ideologia, validar calibracao com mais pontos e validacao cruzada.
+
+## Tabela completa de metricas
+
+| Tarefa | Metrica | Valor |
+|---|---|---|
+| emocao | precision_macro | 0.0 |
+| emocao | recall_macro | 0.0 |
+| emocao | f1_macro | 0.0 |
+| emocao | precision_weighted | 0.0 |
+| emocao | recall_weighted | 0.0 |
+| emocao | f1_weighted | 0.0 |
+| sentimento | accuracy | 0.25 |
+| sentimento | f1_macro | 0.13333333333333333 |
+| sentimento | f1_weighted | 0.1 |
+| assunto | accuracy | 1.0 |
+| assunto | f1_macro | 1.0 |
+| assunto | f1_weighted | 1.0 |
+| assunto | f1_por_classe.economia | 1.0 |
+| assunto | f1_por_classe.educacao | 1.0 |
+| assunto | f1_por_classe.saude | 1.0 |
+| assunto | f1_por_classe.seguranca | 1.0 |
+| ideologia | pearson | 0.0 |
+| ideologia | spearman | 0.0 |
+| ideologia | mae | 0.4330761909484863 |
+| ideologia | rmse | 0.4330761909484863 |
+| ideologia | r2 | None |
+
+## Alertas
+
+- [emocao] Classes sem nenhuma predicao: alegria, frustracao, medo, raiva
+- [emocao] dataset pequeno; interpretar metricas com cautela.
+- [sentimento] Classes sem nenhuma predicao: neutral, positive
+- [sentimento] dataset pequeno; interpretar metricas com cautela.
+- [assunto] dataset pequeno; interpretar metricas com cautela.
+- [ideologia] Conjunto de teste pequeno; metricas podem oscilar bastante.
+- [ideologia] dataset pequeno; interpretar metricas com cautela.
+
+## Exemplos de erros
+
+### Emocao
+- idx=0 real=alegria predito=fear texto="Depois de meses de entrevistas e respostas vagas, recebi a ligacao confirmando a vaga. Abracei minha mae na cozinha, rindo e chorando ao mesmo tempo, com uma leve culpa por finalmente respirar."
+- idx=1 real=raiva predito=anger texto="Quando vejo deputados trocando favores enquanto faltam remedios no posto, sinto um calor subir no peito. Nao e debate ideologico: e revolta crua contra quem trata o mandato como negocio privado."
+- idx=2 real=medo predito=fear texto="O aluguel reajustou de novo, o mercado ficou mais caro e meu contrato vence em abril. Tento manter calma, mas cada conta aberta no celular parece um aviso de que o proximo corte pode ser o meu."
+- idx=3 real=frustracao predito=neutral texto="Protocolamos a denuncia, juntamos provas e seguimos cada etapa exigida, mas o processo foi devolvido por um detalhe burocratico. Ninguem negou o problema, so empurrou a decisao para outro setor indefinidamente."
+### Sentimento
+- idx=0 real=positive predito=negative texto="Depois da atualizacao, o sistema ficou rapido, estavel e facil de usar. A equipe ouviu feedbacks reais e entregou algo que melhora meu trabalho diario de forma clara."
+- idx=2 real=neutral predito=negative texto="A prefeitura publicou relatorio trimestral com dados de transporte, arrecadacao e gastos por secretaria. Houve aumento de passageiros e queda de manutencao, sem indicacao oficial sobre impacto nos servicos."
+- idx=3 real=neutral predito=negative texto="O curso trouxe exemplos praticos e bons professores, mas a carga horaria apertada deixou varios topicos corridos. Saio mais preparado, embora com a impressao de que parte importante ficou superficial."
+### Assunto
+- Sem erros para listar.
+### Ideologia
+- idx=0 real=-0.3000 predito=0.1331 erro=0.4331 texto="Programas sociais sao necessarios em crises, mas o Estado nao deveria substituir mercados que funcionam. Com regulacao enxuta e metas claras, iniciativa privada pode liderar emprego enquanto politicas publicas focam vulnerabilidades reais."
+
+## Graficos
+
+### Matriz de confusao - Emocao
+![Emocao](plots/confusion_emocao.png)
+
+### Matriz de confusao - Sentimento
+![Sentimento](plots/confusion_sentimento.png)
+
+### Matriz de confusao - Assunto
+![Assunto](plots/confusion_assunto.png)
+
+### Dispersao real x predito - Ideologia
+![Ideologia](plots/ideologia_real_vs_predito.png)
+
+### Heatmap de correlacao
+![Correlacao](plots/metricas_correlacao.png)

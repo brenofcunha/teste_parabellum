@@ -28,5 +28,574 @@
         "total": 6
       }
     }
+  },
+  {
+    "timestamp_utc": "2026-02-16T01:04:26.867360+00:00",
+    "python_executable": "C:\\Users\\Breno\\OneDrive\\Documentos\\GitHub\\Projetos\\testes\\.venv\\Scripts\\python.exe",
+    "venv_ativo": true,
+    "resultados": {
+      "emocao": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "total": 4
+      },
+      "sentimento": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "total": 4
+      },
+      "ideologia": {
+        "pearson": 0.0,
+        "mae": 0.36046240031719207,
+        "r2": NaN,
+        "total": 4
+      },
+      "assunto": {
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "total": 4
+      }
+    }
+  },
+  {
+    "timestamp_utc": "2026-02-16T01:22:44.288368+00:00",
+    "python_executable": "C:\\Program Files\\Python313\\python.exe",
+    "venv_ativo": false,
+    "resultados": {
+      "emocao": {
+        "task": "emocao",
+        "total": 4,
+        "task_mode": "multiclasse",
+        "labels": [
+          "alegria",
+          "anger",
+          "fear",
+          "frustracao",
+          "medo",
+          "neutral",
+          "raiva"
+        ],
+        "metrics": {
+          "precision_macro": 0.0,
+          "recall_macro": 0.0,
+          "f1_macro": 0.0,
+          "precision_weighted": 0.0,
+          "recall_weighted": 0.0,
+          "f1_weighted": 0.0
+        },
+        "classification_report_text": "              precision    recall  f1-score   support\n\n     alegria       0.00      0.00      0.00       1.0\n       anger       0.00      0.00      0.00       0.0\n        fear       0.00      0.00      0.00       0.0\n  frustracao       0.00      0.00      0.00       1.0\n        medo       0.00      0.00      0.00       1.0\n     neutral       0.00      0.00      0.00       0.0\n       raiva       0.00      0.00      0.00       1.0\n\n    accuracy                           0.00       4.0\n   macro avg       0.00      0.00      0.00       4.0\nweighted avg       0.00      0.00      0.00       4.0\n",
+        "classification_report_dict": {
+          "alegria": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 1.0
+          },
+          "anger": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
+          "fear": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
+          "frustracao": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 1.0
+          },
+          "medo": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 1.0
+          },
+          "neutral": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
+          "raiva": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 1.0
+          },
+          "accuracy": 0.0,
+          "macro avg": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 4.0
+          },
+          "weighted avg": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 4.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "y_true": [
+          "alegria",
+          "raiva",
+          "medo",
+          "frustracao"
+        ],
+        "y_pred": [
+          "fear",
+          "anger",
+          "fear",
+          "neutral"
+        ],
+        "prediction_samples": [
+          {
+            "index": 0,
+            "texto": "Depois de meses de entrevistas e respostas vagas, recebi a ligacao confirmando a vaga. Abracei minha mae na cozinha, rindo e chorando ao mesmo tempo, com uma leve culpa por finalmente respirar.",
+            "rotulo_real": "alegria",
+            "rotulo_predito": "fear",
+            "acerto": false
+          },
+          {
+            "index": 1,
+            "texto": "Quando vejo deputados trocando favores enquanto faltam remedios no posto, sinto um calor subir no peito. Nao e debate ideologico: e revolta crua contra quem trata o mandato como negocio privado.",
+            "rotulo_real": "raiva",
+            "rotulo_predito": "anger",
+            "acerto": false
+          },
+          {
+            "index": 2,
+            "texto": "O aluguel reajustou de novo, o mercado ficou mais caro e meu contrato vence em abril. Tento manter calma, mas cada conta aberta no celular parece um aviso de que o proximo corte pode ser o meu.",
+            "rotulo_real": "medo",
+            "rotulo_predito": "fear",
+            "acerto": false
+          },
+          {
+            "index": 3,
+            "texto": "Protocolamos a denuncia, juntamos provas e seguimos cada etapa exigida, mas o processo foi devolvido por um detalhe burocratico. Ninguem negou o problema, so empurrou a decisao para outro setor indefinidamente.",
+            "rotulo_real": "frustracao",
+            "rotulo_predito": "neutral",
+            "acerto": false
+          }
+        ],
+        "erros_exemplos": [
+          {
+            "index": 0,
+            "texto": "Depois de meses de entrevistas e respostas vagas, recebi a ligacao confirmando a vaga. Abracei minha mae na cozinha, rindo e chorando ao mesmo tempo, com uma leve culpa por finalmente respirar.",
+            "rotulo_real": "alegria",
+            "rotulo_predito": "fear",
+            "acerto": false
+          },
+          {
+            "index": 1,
+            "texto": "Quando vejo deputados trocando favores enquanto faltam remedios no posto, sinto um calor subir no peito. Nao e debate ideologico: e revolta crua contra quem trata o mandato como negocio privado.",
+            "rotulo_real": "raiva",
+            "rotulo_predito": "anger",
+            "acerto": false
+          },
+          {
+            "index": 2,
+            "texto": "O aluguel reajustou de novo, o mercado ficou mais caro e meu contrato vence em abril. Tento manter calma, mas cada conta aberta no celular parece um aviso de que o proximo corte pode ser o meu.",
+            "rotulo_real": "medo",
+            "rotulo_predito": "fear",
+            "acerto": false
+          },
+          {
+            "index": 3,
+            "texto": "Protocolamos a denuncia, juntamos provas e seguimos cada etapa exigida, mas o processo foi devolvido por um detalhe burocratico. Ninguem negou o problema, so empurrou a decisao para outro setor indefinidamente.",
+            "rotulo_real": "frustracao",
+            "rotulo_predito": "neutral",
+            "acerto": false
+          }
+        ],
+        "warnings": [
+          "Classes sem nenhuma predicao: alegria, frustracao, medo, raiva"
+        ]
+      },
+      "sentimento": {
+        "task": "sentimento",
+        "total": 4,
+        "labels": [
+          "negative",
+          "neutral",
+          "positive"
+        ],
+        "metrics": {
+          "accuracy": 0.25,
+          "f1_macro": 0.13333333333333333,
+          "f1_weighted": 0.1
+        },
+        "classification_report_text": "              precision    recall  f1-score   support\n\n    negative       0.25      1.00      0.40         1\n     neutral       0.00      0.00      0.00         2\n    positive       0.00      0.00      0.00         1\n\n    accuracy                           0.25         4\n   macro avg       0.08      0.33      0.13         4\nweighted avg       0.06      0.25      0.10         4\n",
+        "classification_report_dict": {
+          "negative": {
+            "precision": 0.25,
+            "recall": 1.0,
+            "f1-score": 0.4,
+            "support": 1.0
+          },
+          "neutral": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 2.0
+          },
+          "positive": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 1.0
+          },
+          "accuracy": 0.25,
+          "macro avg": {
+            "precision": 0.08333333333333333,
+            "recall": 0.3333333333333333,
+            "f1-score": 0.13333333333333333,
+            "support": 4.0
+          },
+          "weighted avg": {
+            "precision": 0.0625,
+            "recall": 0.25,
+            "f1-score": 0.1,
+            "support": 4.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ]
+        ],
+        "y_true": [
+          "positive",
+          "negative",
+          "neutral",
+          "neutral"
+        ],
+        "y_pred": [
+          "negative",
+          "negative",
+          "negative",
+          "negative"
+        ],
+        "prediction_samples": [
+          {
+            "index": 0,
+            "texto": "Depois da atualizacao, o sistema ficou rapido, estavel e facil de usar. A equipe ouviu feedbacks reais e entregou algo que melhora meu trabalho diario de forma clara.",
+            "rotulo_real": "positive",
+            "rotulo_predito": "negative",
+            "acerto": false
+          },
+          {
+            "index": 1,
+            "texto": "O atendimento prometeu retorno em 24 horas, ignorou tres chamados e encerrou meu ticket sem solucao. Perdi prazo com cliente e fiquei com a sensacao de descaso total.",
+            "rotulo_real": "negative",
+            "rotulo_predito": "negative",
+            "acerto": true
+          },
+          {
+            "index": 2,
+            "texto": "A prefeitura publicou relatorio trimestral com dados de transporte, arrecadacao e gastos por secretaria. Houve aumento de passageiros e queda de manutencao, sem indicacao oficial sobre impacto nos servicos.",
+            "rotulo_real": "neutral",
+            "rotulo_predito": "negative",
+            "acerto": false
+          },
+          {
+            "index": 3,
+            "texto": "O curso trouxe exemplos praticos e bons professores, mas a carga horaria apertada deixou varios topicos corridos. Saio mais preparado, embora com a impressao de que parte importante ficou superficial.",
+            "rotulo_real": "neutral",
+            "rotulo_predito": "negative",
+            "acerto": false
+          }
+        ],
+        "erros_exemplos": [
+          {
+            "index": 0,
+            "texto": "Depois da atualizacao, o sistema ficou rapido, estavel e facil de usar. A equipe ouviu feedbacks reais e entregou algo que melhora meu trabalho diario de forma clara.",
+            "rotulo_real": "positive",
+            "rotulo_predito": "negative",
+            "acerto": false
+          },
+          {
+            "index": 2,
+            "texto": "A prefeitura publicou relatorio trimestral com dados de transporte, arrecadacao e gastos por secretaria. Houve aumento de passageiros e queda de manutencao, sem indicacao oficial sobre impacto nos servicos.",
+            "rotulo_real": "neutral",
+            "rotulo_predito": "negative",
+            "acerto": false
+          },
+          {
+            "index": 3,
+            "texto": "O curso trouxe exemplos praticos e bons professores, mas a carga horaria apertada deixou varios topicos corridos. Saio mais preparado, embora com a impressao de que parte importante ficou superficial.",
+            "rotulo_real": "neutral",
+            "rotulo_predito": "negative",
+            "acerto": false
+          }
+        ],
+        "warnings": [
+          "Classes sem nenhuma predicao: neutral, positive"
+        ]
+      },
+      "ideologia": {
+        "task": "ideologia",
+        "task_type": "regressao",
+        "mode": "completo",
+        "model_name": "distilbert-base-uncased",
+        "model_dir": "models\\ideologia_model",
+        "train_size": 3,
+        "test_size": 1,
+        "total": 4,
+        "metrics": {
+          "pearson": 0.0,
+          "spearman": 0.0,
+          "mae": 0.4330761909484863,
+          "rmse": 0.4330761909484863,
+          "r2": null
+        },
+        "y_true": [
+          -0.3
+        ],
+        "y_pred": [
+          0.13307619094848633
+        ],
+        "prediction_samples": [
+          {
+            "index": 0,
+            "texto": "Programas sociais sao necessarios em crises, mas o Estado nao deveria substituir mercados que funcionam. Com regulacao enxuta e metas claras, iniciativa privada pode liderar emprego enquanto politicas publicas focam vulnerabilidades reais.",
+            "rotulo_real": -0.3,
+            "rotulo_predito": 0.13307619094848633,
+            "erro_absoluto": 0.4330761909484863
+          }
+        ],
+        "erros_exemplos": [
+          {
+            "index": 0,
+            "texto": "Programas sociais sao necessarios em crises, mas o Estado nao deveria substituir mercados que funcionam. Com regulacao enxuta e metas claras, iniciativa privada pode liderar emprego enquanto politicas publicas focam vulnerabilidades reais.",
+            "rotulo_real": -0.3,
+            "rotulo_predito": 0.13307619094848633,
+            "erro_absoluto": 0.4330761909484863
+          }
+        ],
+        "warnings": [
+          "Conjunto de teste pequeno; metricas podem oscilar bastante."
+        ],
+        "labels": null,
+        "classification_report_text": null,
+        "classification_report_dict": null,
+        "wordfish_baseline": null
+      },
+      "assunto": {
+        "task": "assunto",
+        "total": 4,
+        "labels": [
+          "economia",
+          "educacao",
+          "saude",
+          "seguranca"
+        ],
+        "metrics": {
+          "accuracy": 1.0,
+          "f1_macro": 1.0,
+          "f1_weighted": 1.0,
+          "f1_por_classe": {
+            "economia": 1.0,
+            "educacao": 1.0,
+            "saude": 1.0,
+            "seguranca": 1.0
+          }
+        },
+        "classification_report_text": "              precision    recall  f1-score   support\n\n    economia       1.00      1.00      1.00         1\n    educacao       1.00      1.00      1.00         1\n       saude       1.00      1.00      1.00         1\n   seguranca       1.00      1.00      1.00         1\n\n    accuracy                           1.00         4\n   macro avg       1.00      1.00      1.00         4\nweighted avg       1.00      1.00      1.00         4\n",
+        "classification_report_dict": {
+          "economia": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 1.0
+          },
+          "educacao": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 1.0
+          },
+          "saude": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 1.0
+          },
+          "seguranca": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 1.0
+          },
+          "accuracy": 1.0,
+          "macro avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "weighted avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ]
+        ],
+        "y_true": [
+          "economia",
+          "saude",
+          "educacao",
+          "seguranca"
+        ],
+        "y_pred": [
+          "economia",
+          "saude",
+          "educacao",
+          "seguranca"
+        ],
+        "prediction_samples": [
+          {
+            "index": 0,
+            "texto": "Com juros altos e isencoes seletivas, o debate economico virou disputa eleitoral antecipada. Alguns defendem austeridade imediata; outros cobram investimento publico para segurar emprego, enquanto o custo de vida pressiona bairros perifericos.",
+            "rotulo_real": "economia",
+            "rotulo_predito": "economia",
+            "acerto": true
+          },
+          {
+            "index": 1,
+            "texto": "No hospital regional, faltam insumos basicos em dias de maior demanda, apesar de contratos recentes anunciados pela secretaria. Profissionais se desdobram para atender, mas a gestao central responde com notas tecnicas e pouca transparencia.",
+            "rotulo_real": "saude",
+            "rotulo_predito": "saude",
+            "acerto": true
+          },
+          {
+            "index": 2,
+            "texto": "A rede estadual ampliou matriculas no ensino tecnico, porem o orcamento para manutencao escolar caiu no mesmo periodo. Diretores celebram novas vagas, mas relatam laboratorios incompletos e dificuldade para manter professores especializados.",
+            "rotulo_real": "educacao",
+            "rotulo_predito": "educacao",
+            "acerto": true
+          },
+          {
+            "index": 3,
+            "texto": "Depois de dois assaltos na mesma rua, moradores passaram a evitar sair a noite e cobram policiamento constante. A prefeitura promete cameras, mas o medo diario mistura indignacao, cansaco e pressa por respostas concretas.",
+            "rotulo_real": "seguranca",
+            "rotulo_predito": "seguranca",
+            "acerto": true
+          }
+        ],
+        "erros_exemplos": [],
+        "warnings": []
+      }
+    }
   }
 ]
