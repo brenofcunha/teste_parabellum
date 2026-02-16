@@ -1,0 +1,32 @@
+[
+  {
+    "timestamp_utc": "2026-02-15T22:31:22.303692+00:00",
+    "python_executable": "C:\\Users\\Breno\\OneDrive\\Documentos\\GitHub\\Projetos\\testes\\.venv\\Scripts\\python.exe",
+    "venv_ativo": true,
+    "resultados": {
+      "emocao": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "total": 7
+      },
+      "sentimento": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "total": 5
+      },
+      "ideologia": {
+        "pearson": -0.01661291224946214,
+        "mae": 0.64099848985672,
+        "r2": -0.15768466103109113,
+        "total": 5
+      },
+      "assunto": {
+        "accuracy": 0.6666666666666666,
+        "f1": 0.611111111111111,
+        "total": 6
+      }
+    }
+  }
+]
